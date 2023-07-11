@@ -1,0 +1,53 @@
+/*
+
+Theme Name: zBoom
+Theme URI: https://bdprogrammer.com
+Author: Asaduzzaman
+Author URI: https://bdprogrammer.com
+Description: Simple music theme
+Version: 1.0
+Tags: music, song
+Textdomain: zboom
+
+
+*/
+
+.comment input{
+    margin-bottom: 10px;
+}
+
+.comment-form label{
+    display: block;
+}
+
+input#wp-comment-cookies-consent {
+    width: inherit;    
+}
+
+.comment-form label[for="wp-comment-cookies-consent"]{
+    display: inline;
+}
+
+.right-sidebar ul{
+    background-color: #1E1E1E;
+    margin-left: 0 !important;
+    padding-left: 25px;
+}
+
+.not-found-page-title{
+    font-size: 65px;
+    text-align: center;
+    margin-top: 150px;
+    color: #fff;
+}
+
+p.wrong-para {
+    text-align: center;
+    padding-top: 24px;
+    color: #fff;
+    font-size: 16px;
+}
+
+iframe{
+    width: 100%;
+}
