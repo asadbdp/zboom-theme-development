@@ -49,10 +49,49 @@
 			</div>
 
             <?php endwhile;?>
+
+			<h2>
+				Gender Selection : 
+				<?php if($zboom['gender']==1) : ?>
+					Male
+				<?php endif; ?>
+
+				<?php if($zboom['gender']==2) : ?>
+					Female
+				<?php endif; ?>
+			</h2>
+
+			<h2>
+				Gender Selection : 
+				<?php if($zboom['select-option']==1) : ?>
+					Male
+				<?php endif; ?>
+
+				<?php if($zboom['select-option']==2) : ?>
+					Female
+				<?php endif; ?>
+			</h2>
+
+			<h2>
+				Category Selection : 
+				<?php  $cat_id = $zboom['select-category']; echo get_the_category_by_ID( $cat_id );?>
+					
+			</h2>
+
+			<h2>
+				your price range : 
+				<?php  echo $zboom['price-range'];?>
+					
+			</h2>
+
+
+
 			
 		</div>
 		<div class="row block02">
-			<div class="col-2-3">
+
+		<?php if($zboom['website_layout'] == 1) : ?>
+			<div class="col-3-3">
 				<div class="wrap-col">
 					<div class="heading"><h2>Latest Blog</h2></div>
 					<?php $blogpost = new WP_Query(array(
@@ -77,9 +116,22 @@
 					<?php endwhile;?>
 				</div>
 			</div>
-			<div class="col-1-3">
+
+			<?php endif;?>
+
+
+			<?php if($zboom['website_layout']==2):?>		
+
+			<div class="col-2-3">
+				
 				<?php get_sidebar( );?>
+
+				
 			</div>
+
+			<?php endif;?>
+
+
 		</div>
 	</div>
 </section>

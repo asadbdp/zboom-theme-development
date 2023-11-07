@@ -10,12 +10,42 @@
     <!-- Mobile Specific Metas
   ================================================== -->
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    
+	
+	<style>
+		body{
+			background-color:<?php global $zboom; echo $zboom['zbg-color']['background-color'];?> !important;
+			background-image:url(<?php echo $zboom['zbg-color']['background-image'];?>) !important;
+			background-size:<?php echo $zboom['zbg-color']['background-size'];?> !important;
+			background-position:<?php echo $zboom['zbg-color']['background-position'];?> !important;
+			background-attachment:<?php echo $zboom['zbg-color']['background-attachment'];?> !important;
+			background-repeat:<?php echo $zboom['zbg-color']['background-repeat'];?> !important;
+		}
+
+		nav .wrap-nav{
+			background-color: <?php echo $zboom['header-bg-color'];?> !important;
+			height: <?php echo $zboom['nav-height']['height'];?> !important;;
+		}
+
+		
+
+		.menu ul li a{
+			color: <?php echo $zboom['menu-color']['regular'];?> !important;			
+		}
+
+		.menu ul .menu-item:hover{
+			color: <?php echo $zboom['menu-color']['hover'];?> !important;
+			background-color: <?php echo $zboom['menu-hover-color'];?> !important;
+		}
+
+		.menu .current-menu-item{
+			color: <?php echo $zboom['menu-color']['hover'];?> !important;
+			background-color: <?php echo $zboom['menu-active-color'];?> !important;
+		}
+	</style>
     
 	
 	
 	<link href='<?php echo esc_url(get_template_directory_uri());?>/images/favicon.ico' rel='icon' type='image/x-icon'/>
-	
 	
 	
 
@@ -25,7 +55,7 @@
 <!--------------Header--------------->
 <header>
 	<div class="wrap-header zerogrid">
-		<div id="logo"><a href="<?php bloginfo('home');?>"><img src="<?php echo esc_url(get_template_directory_uri());?>/images/logo.png"/></a></div>
+		<div id="logo"><a href="<?php bloginfo('home');?>"><img src="<?php global $zboom; echo $zboom['logo-upload']['url']?>"></a></div>
 		
 		<div id="search">
 			<div class="button-search"></div>
@@ -60,3 +90,4 @@
 		</div>		
 	</div>
 </nav>
+
